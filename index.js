@@ -12,7 +12,7 @@ move(newImage('assets/pine-tree.png')).to(450, 350)
 move(newImage('assets/crate.png')).to(150, 350)
 move(newImage('assets/well.png')).to(500, 575)
 
-function move(image, left, bottom) {
+function move(url, left, bottom) {
     image.style.position = 'fixed'
     image.style.position = left + 'px'
     image.style.bottom = bottom + 'px'
@@ -43,9 +43,12 @@ function newItem(url, left, bottom){
     return item
 }
 
-newItem('assets/sword.png', 500, 555)
-newItem('assets/shield.png', 165, 335)
-newItem('assets/staff.png', 600, 250)
+let sword = newItem('assets/sword.png')
+move(sword).to(500, 555)
+let shield = newItem('assets/shield.png')
+move(shield).to(165, 335)
+let staff = newItem('assets/staff.png')
+move(staff).to(600, 250)
 
 function newInventory(){
     let inventory = document.createElement('div')
